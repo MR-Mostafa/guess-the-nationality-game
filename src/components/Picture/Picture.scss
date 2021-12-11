@@ -1,0 +1,42 @@
+@import '../../assets/styles/variables.scss';
+
+@keyframes transformY {
+	0% {
+		transform: translateY(#{$picture-width * -1});
+		opacity: 0;
+	}
+	5% {
+		opacity: 1;
+	}
+	90% {
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(calc(100vh - #{$picture-width}));
+		opacity: 0;
+	}
+}
+
+.nationality-picture {
+	width: $picture-width;
+	z-index: $picture-index;
+	padding-top: $spacing;
+
+	img {
+		cursor: move;
+		height: $picture-height;
+		object-fit: cover;
+		will-change: transform, opacity;
+		transform: translateY(#{$picture-width * -1});
+		animation: none;
+
+		&.animation {
+			animation: transformY 3s linear infinite backwards;
+		}
+
+		&.dragging {
+			opacity: 0.4;
+			filter: grayscale(1);
+		}
+	}
+}
