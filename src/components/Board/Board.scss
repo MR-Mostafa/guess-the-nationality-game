@@ -1,0 +1,8 @@
+@import '../../assets/styles/variables.scss';
+
+.nationality-board {
+	padding: $spacing;
+	width: $board-width;
+	height: $board-height;
+	z-index: $board-index;
+}
