@@ -1,0 +1,17 @@
+// Global
+$spacing: 20px;
+$max-z-index: 100;
+
+// Score Component
+$score-height: 72px;
+$score-index: $max-z-index -1;
+
+// Picture Component
+$picture-width: 100px;
+$picture-height: 100px;
+$picture-index: $max-z-index -2;
+
+// Board Component
+$board-index: $max-z-index;
+$board-width: 160px;
+$board-height: 160px;
